@@ -27,26 +27,26 @@ Any user account can connect one or more social identities to their account
 and use them to login in with (before or after their account is created).
 
 = Supported Providers =
-Facebook
-Twitter
-Google
-Google Plus
-LinkedIn
-Tumblr
-Box
-Paypal
-Yahoo
-Dropbox
-OpenID
-Instagram
-VK (Vkontakte)
-Foursquare
-Windows Live
-SoundCloud
-Discogs
-Flickr
-SalesForce.com
-more...
+- Facebook
+- Twitter
+- Google
+- Google Plus
+- LinkedIn
+- Tumblr
+- Box
+- Paypal
+- Yahoo
+- Dropbox
+- OpenID
+- Instagram
+- VK (Vkontakte)
+- Foursquare
+- Windows Live
+- SoundCloud
+- Discogs
+- Flickr
+- SalesForce.com
+- more...
 
 For additional details of the module, visit the project page:
   http://www.stitchz.net/Wordpress
