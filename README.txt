@@ -1,14 +1,14 @@
 === Stitchz Social Login ===
 Contributors: stitchzdotnet
 Link: http://www.stitchz.net/
-Tags: user authentication, social login, facebook, google, twitter, single sign-on, linkedin, social authentication, sso, vk, plugin, widget
+Tags: user authentication, social login, facebook, google, twitter, single sign-on, linkedin, social authentication, sso, vk, plugin, widget, yahoo, microsoft live, paypal, google plus, open id
 Requires at least: 3.9.2
 Tested up to: 3.9
 Stable tag: 1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-The Stitchz Social Login module adds the option to authenticate with one or
+The Stitchz Social Login plugin adds the option to authenticate with one or
 more of the 20+ social identities providers supported by Stitchz.
 
 == Description ==
@@ -48,7 +48,7 @@ and use them to login in with (before or after their account is created).
 - SalesForce.com
 - more...
 
-For additional details of the module, visit the project page:
+For additional details of the plugin, visit the project page:
   http://www.stitchz.net/Wordpress
 
 To submit bug reports and feature suggestions, or to track changes:
