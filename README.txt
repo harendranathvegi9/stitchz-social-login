@@ -101,18 +101,12 @@ None.
 
 
 == Frequently Asked Questions ==
+= If the sample login links do not display on the Stitchz Login API Settings page, check the following: =
+- Check that the App Url, ApiKey and AppSecret are entered exactly as displayed in your Stitchz application page at: <a href="https://login.stitchz.net/">https://login.stitchz.net/</a>
 
-= If the sample login links do not display on the Stitchz Login API Settings
-  page, check the following: =
+- Confirm your settings, click Save and try again. 
 
-  - Check that the App Url, ApiKey and AppSecret are entered exactly as 
-    displayed in your Stitchz application page at: <a href="https://login.stitchz.net/">https://login.stitchz.net/</a>
-
-  - Confirm your settings, click Save and try again. 
-
-  - Go to your Stitchz application and confirm the Return Url matches your
-    website address plus the required Stitchz end point in Wordpress, i.e. 
-    'http://www.YourWebsiteAddress.com/stitchz_social_login/auth'
+- Go to your Stitchz application and confirm the Return Url matches your website address plus the required Stitchz end point in Wordpress, i.e. 'http://www.YourWebsiteAddress.com/stitchz_social_login/auth'
 
 
 == Changelog ==
@@ -127,9 +121,9 @@ None.
 
 == Screenshots ==
 
-1. **Stitchz Social Login Settings**: http://www.stitchz.net/Content/images/stitchz_social_login_wordpress_settings.png
+1. **Stitchz Social Login Settings**:
 
 == CONTACT ==
 
 Current maintainer(s):
-* Stitchzdotnet (Ethan Peterson) - @stichzdotnet on Twitter
+* Stitchzdotnet (Ethan Peterson) - <a href="http://www.twitter.com/stitchzdotnet">@stichzdotnet</a> on Twitter
