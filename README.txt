@@ -34,7 +34,7 @@ To submit bug reports and feature suggestions, or to track changes:
 
 
 == Installation ==
-=General Installation=
+= General Installation =
 Stitchz Social Login plugin can be downloaded and added as a plugin to any existing Wordpress installation. The plugin can be downloaded from: http://www.stitchz.net/Wordpress
 
 1. Login to Wordpress as an Administrator.
@@ -50,7 +50,7 @@ Stitchz Social Login plugin can be downloaded and added as a plugin to any exist
 6. Click "Install Now" to install the plugin.
 
 
-=Configuration=
+= Configuration =
 Before using Stitchz Social Login, you must setup an application at: <a href="https://login.stitchz.net/">https://login.stitchz.net/</a>. Once you application has been setup, continue with
 the steps below.
 
@@ -102,8 +102,8 @@ None.
 
 == Frequently Asked Questions ==
 
-=If the sample login links do not display on the Stitchz Login API Settings
-  page, check the following:=
+= If the sample login links do not display on the Stitchz Login API Settings
+  page, check the following: =
 
   - Check that the App Url, ApiKey and AppSecret are entered exactly as 
     displayed in your Stitchz application page at: <a href="https://login.stitchz.net/">https://login.stitchz.net/</a>
