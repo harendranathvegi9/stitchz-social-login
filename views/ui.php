@@ -16,7 +16,7 @@ add_action( 'login_enqueue_scripts', 'stitchz_social_login_enqueue_stylesheet' )
  * Display the list of identity providers for the login form.
  */
 function stitchz_social_login_display_login_form() {
-  stitchz_social_login_login_view( 'login_form' );
+  echo stitchz_social_login_login_view( 'login_form' );
 }
 add_action( 'login_form', 'stitchz_social_login_display_login_form' );
 
@@ -24,7 +24,7 @@ add_action( 'login_form', 'stitchz_social_login_display_login_form' );
  * Display the list of identity providers for the registration form.
  */
 function stitchz_social_login_display_registration_form() {
-  stitchz_social_login_login_view( 'registration_form' );
+  echo stitchz_social_login_login_view( 'registration_form' );
 }
 add_action( 'register_form', 'stitchz_social_login_display_registration_form' );
 
@@ -33,7 +33,7 @@ add_action( 'register_form', 'stitchz_social_login_display_registration_form' );
  */
 function stitchz_social_login_display_comments_form() {
   if ( ! is_user_logged_in() && comments_open() ) {
-	stitchz_social_login_login_view( 'comments_form' );
+	echo stitchz_social_login_login_view( 'comments_form' );
   }
 }
 add_action( 'wp_enqueue_scripts', 'stitchz_social_login_enqueue_stylesheet' );
@@ -58,8 +58,7 @@ function stitchz_social_login_login_view( $page ) {
 	$domain = esc_url_raw( isset( $settings['domain'] ) ? $settings['domain'] : __( 'https://api.stitchz.net/', 'stitchz_social_login' ) );
 	$apikey = sanitize_text_field( isset( $settings['apikey'] ) ? $settings['apikey'] : '' );
 	$appsecret = sanitize_text_field( isset( $settings['appsecret'] ) ? $settings['appsecret'] : '' );
-	$redirecturl = esc_url_raw( isset( $settings['redirecturl'] ) ? $settings 
-['redirecturl'] : get_site_url() . '/stitchz_social_login/auth' );
+	$redirecturl = esc_url_raw( isset( $settings['redirecturl'] ) ? $settings['redirecturl'] : get_site_url() . '/stitchz_social_login/auth' );
 	$version = sanitize_text_field( isset( $settings['version'] ) ? $settings['version'] : '2' );
 	$providers = stitchz_social_login_decode_json( sanitize_text_field( isset( $settings['providers'] ) ? $settings['providers'] : '' ) );
 	$scope = sanitize_text_field( isset( $settings['scope'] ) ? $settings['scope'] : '');
@@ -69,25 +68,20 @@ function stitchz_social_login_login_view( $page ) {
 	$enable_comment_screen = sanitize_text_field( isset( $settings['enable_comment_screen'] ) ? ( $settings['enable_comment_screen'] == '1' ? TRUE : FALSE ) : FALSE );
 	$notes = sanitize_text_field( ( isset( $settings['notes'] ) ? $settings['notes'] : '' ), 'filtered_html' );
 
+	$view_html = '<div id="stitchz_social_login_provider_list_block">';
 	if ( 'login_form' === $page && $enable_user_login_screen ) {
-	?>
-	<div id="stitchz_social_login_provider_list_block">
-	<?php $providers_list = stitchz_social_login_format_provider_list( $domain, $providers, $version, $apikey, $redirecturl, $scope, $notes );
-    echo $providers_list ?></div>
-	<?php
+	  $providers_list = stitchz_social_login_format_provider_list( $domain, $providers, $version, $apikey, $redirecturl, $scope, $notes );
+      $view_html .=  $providers_list;
 	} elseif ( 'registration_form' === $page && $enable_user_registration_screen ) {
-	?>
-	<div id="stitchz_social_login_provider_list_block">
-	<?php $providers_list = stitchz_social_login_format_provider_list( $domain, $providers, $version, $apikey, $redirecturl, $scope, $notes, __( 'Register with', 'stitchz_social_login' ) . ':' );
-    echo $providers_list ?></div>
-	<?php
+	  $providers_list = stitchz_social_login_format_provider_list( $domain, $providers, $version, $apikey, $redirecturl, $scope, $notes, __( 'Register with', 'stitchz_social_login' ) . ':' );
+      $view_html .= $providers_list;
 	} elseif ( 'comments_form' === $page && $enable_comment_screen ) {
-	?>
-	<div id="stitchz_social_login_provider_list_block">
-	<?php $providers_list = stitchz_social_login_format_provider_list( $domain, $providers, $version, $apikey, $redirecturl, $scope, $notes, __( 'Comment with', 'stitchz_social_login' ) . ':' );
-    echo $providers_list ?></div>
-	<?php
+	  $providers_list = stitchz_social_login_format_provider_list( $domain, $providers, $version, $apikey, $redirecturl, $scope, $notes, __( 'Comment with', 'stitchz_social_login' ) . ':' );
+      $view_html .= $providers_list;
 	}
+	$view_html .= '</div>';
+
+	return $view_html;
   }
 }
 
@@ -374,7 +368,7 @@ function stitchz_social_login_addin_unused_identity_list( $account, array $provi
     }
 
     // Footer.
-    $provider_html .= '<div class="icon_footer"></div></div><div style="clear:both;"></div>';
+    $provider_html .= '<div class="icon_footer"></div><div style="clear:both;"></div>';
   }
 
   return $provider_html;

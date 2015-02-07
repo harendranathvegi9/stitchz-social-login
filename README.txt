@@ -106,16 +106,11 @@ the steps below.
 
 == USAGE ==
 
-* To login with any identity provider, click the provider link on the login
-  page. The browser will be redirected to the identity provider's login page 
-  followed by (typically) a permissions/scope confirmation page. After a 
-  successful login the browser will be redirected back to the Wordpress website. 
+* To login with any identity provider, click the provider link on the login page. The browser will be redirected to the identity provider's login page followed by (typically) a permissions/scope confirmation page. After a successful login the browser will be redirected back to the Wordpress website. 
 
-* Any user account can connect one or more social identities to their account.
-  The Connected Identities section on the user profile page lists all social 
-  identities associated with the user. Identities can be removed by clicking
-  the "X" next to the provider name, or added by click the provider name. 
+* Any user account can connect one or more social identities to their account. The Connected Identities section on the user profile page lists all social identities associated with the user. Identities can be removed by clicking the "X" next to the provider name, or added by click the provider name. 
 
+* Stitchz Login Shortcode can be used on any page/post by using the following: [stitchz_social_login_shortcode]
 
 == REQUIREMENTS ==
 
@@ -133,6 +128,9 @@ None.
 
 == Changelog ==
 
+  = 1.0.1 =
+  * Added shortcode code
+
   = 1.0 =
   * 1st version
 
@@ -140,6 +138,9 @@ None.
 
   = 1.0 =
   * 1st version
+
+  = 1.0.1 =
+  * Added shortcode code
 
 == Screenshots ==
 1. **Stitchz Social Login Settings**: The Stitchz Social Login Settings Screen

@@ -315,6 +315,7 @@ function stitchz_social_login_admin_provider_list() {
 	}
    }
    catch ( WP_Exception $exception ) {
+		stitchz_social_login_log_debug( $exception->get_error_message() );
         echo $exception->get_error_message();
     }
 }

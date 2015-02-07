@@ -62,7 +62,7 @@ function stitchz_social_login_provider_list() {
 add_action( 'wp_ajax_stitchz_social_login_provider_list', 'stitchz_social_login_provider_list' );
 
 /**
- * Initializes authorization handler and associated end points
+ * Initializes authorization handler and associated end points.
  *
  * @return void
  */
@@ -74,3 +74,13 @@ function stitchz_social_login_initialize() {
   add_rewrite_rule( '^stitchz_social_login/?([0-9]+)?/identity/delete/?([0-9]+)?', 'index.php?user_id=$matches[1]&meta_id=$matches[2]&__del=1', 'top' );
 }
 add_action( 'init', 'stitchz_social_login_initialize', 101 );
+
+/*
+ * Defines a short code for the social login form.
+ *
+ * Example: [stitchz_social_login_shortcode]
+ */
+function stitchz_social_login_shortcode_func() {
+  return stitchz_social_login_display_login_form();
+}
+add_shortcode( 'stitchz_social_login_shortcode', 'stitchz_social_login_shortcode_func' );

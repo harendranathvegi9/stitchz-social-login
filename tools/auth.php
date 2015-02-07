@@ -556,7 +556,7 @@ function stitchz_social_login_set_login_message( $message, $error_type ) {
   if ( ! empty( $message ) ) {
 	$class_name = esc_attr( $error_type !== 'error' ? 'update-nag' : 'error login-error' );
 	$id_name = esc_attr( $error_type !== 'error' ? 'login_message' : 'login_error' );
-	
+
     return '<div id="setting-error-stitchz_social_login_' . $id_name . '" class="' . $class_name . '">' . sanitize_text_field( $message ) . '</div>';
   }
 }

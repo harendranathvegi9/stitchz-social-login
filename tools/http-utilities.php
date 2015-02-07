@@ -182,7 +182,7 @@ function stitchz_social_login_authorization_handler_prepare_and_send_v1_request(
     if ( FALSE === stitchz_social_login_check_is_valid_api_ur( $url ) ) {
 	  return '<div class="messages error"><ul><li>' . __( 'Invalid App Url. Ensure the App Url is correct or contact your service provider.', 'stitchz_social_login' ) . '</li></ul></div>';
     }
-	
+
 	$options = array(
 	  'method' => 'POST',
 	  'headers' => array(
@@ -270,7 +270,7 @@ function stitchz_social_login_authorization_handler_prepare_and_send_v2_request(
 	$url = rtrim( esc_url_raw( $dnsalias ), '/' ) . '/Authentication/v2/Auth';
 	$version = 'v2';
 	$data = 'client_id=' . urlencode( $apikey ) . '&client_secret=' . urlencode( $appsecret ) . '&grant_type=authorization_code&redirect_uri=' . urlencode( $redirecturi ) . '&code=' . urlencode( $token ) . '&version=' . urlencode( $version ) . '&format=json';
-	
+
     // Check for a valid $url (api) and return an error if invalid.
     if ( FALSE === stitchz_social_login_check_is_valid_api_url( $url ) ) {
 	  return '<div class="messages error"><ul><li>' . __(  'Invalid App Url. Ensure the App Url is correct or contact your service provider.', 'stitchz_social_login' ) . '</li></ul></div>';
