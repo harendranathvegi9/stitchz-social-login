@@ -1,0 +1,106 @@
+
+CONTENTS OF THIS FILE
+---------------------
+
+ * Requirements and notes
+ * Installation
+ * Configuration
+ * Options
+ * More information
+
+REQUIREMENTS AND NOTES
+----------------------
+
+None.
+
+
+
+INSTALLATION
+------------
+
+1. Download the Stitczh Social Login plugin from http://www.stitchz.net/Wordpress
+   Keep track of where the file was saved as it will be needed in the following
+   steps.
+
+2. Login to Wordpress as an Administrator.
+
+3. Go to the Wordpress Admin counsel, then click "Plugins".
+
+4. Click "Add New".
+
+5. On the Add New page, click "Upload".
+
+6. Click "Browse" and navigate to where the stitchz_social_login.zip file was 
+   saved to and click open.
+
+7. Click "Install Now" to install the plugin.
+
+
+
+CONFIGURATION
+------------
+
+Before using Stitchz Social Login, you must setup an application at: 
+https://login.stitchz.net/. Once you application has been setup, continue with
+the steps below.
+
+1.  Login to your Wordpress site as an Administrator, and go to the Wordpress 
+    Admin counsel.
+
+2.  Click "Settings > Permalinks"
+
+3.  Change the default way WordPress handles web URLs. Under "Common Settings", 
+    select any option except "Default", and click "Save Changes". This will 
+    modify the .htaccess rewrite rules.
+
+4.  Next, click "Plugins".
+
+5.  Navigate to the Stitchz Social Login plugin in the plugins list and click 
+    "Activate".
+
+6.  Then, click "Configure".
+
+7.  Copy your App Url, ApiKey, AppSecret, and Return Url from your Stitchz
+    application into the appropriate fields in the Stitchz Social Login API
+    Settings form. All fields with "(required)" are, you guessed it, required.
+
+    The "Return Url" is your Wordpress website's full web address plus the Stitchz
+    Wordpress end point ('/stitchz_social_login/auth'), i.e.
+    https://www.yourwebsiteaddress.com/stitchz_social_login/auth
+
+8.  Next, select the API Version to run. The "Standard Login" option is a basic
+    authentication request used to only authenticate a user. The "OAuth 2 Login"
+    option sends an OAuth 2.0 authenticated request to the Stitchz API and
+    returns a valid OAuth 2.0 token. The token can be used later to make authorized
+    requests to Stitchz.
+
+9.  Confirm your Stitchz Login API Settings before moving on to the next section.
+
+10. Click the "Sync Providers" button to synchronize your provider list 
+    configured in your Stitchz application with your Wordpress instance. If all 
+    settings are correct a sample login will display with all your configured and
+    active identity providers. Check the README.txt file if any errors occur.
+
+11. Enable/disable any login forms where the Stitchz Social Login links are 
+    displayed. By default the links are visible on all available forms.
+
+12. The "Social Login Notes" field can contain up to 255 letters or numbers in 
+    plain text and will be displayed under the social login links.
+
+13. Click Save.
+
+
+OPTIONS
+--------
+
+-
+
+
+MORE INFORMATION
+----------------
+
+- Visit:
+  http://www.stitchz.net/Wordpress
+  http://www.stitchz.net/documentation
+  http://stitchz.uservoice.com/forums/81839?lang=en
+  http://www.stitchz.net/contactus
