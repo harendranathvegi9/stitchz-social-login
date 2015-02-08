@@ -9,7 +9,7 @@
 * License: GPLv3
 */
 
-define( 'STITCHZ_SOCIAL_LOGIN_VERSION', '1.0' );
+define( 'STITCHZ_SOCIAL_LOGIN_VERSION', '1.0.2' );
 define( 'STITCHZ_SOCIAL_LOGIN__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'STITCHZ_SOCIAL_LOGIN__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
