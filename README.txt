@@ -128,6 +128,9 @@ None.
 
 == Changelog ==
 
+  = 1.0.2 =
+  * Small bug fix in auth handler
+
   = 1.0.1 =
   * Added shortcode code
 
@@ -141,6 +144,9 @@ None.
 
   = 1.0.1 =
   * Added shortcode code
+
+  = 1.0.2 =
+  * Small bug fix in auth handler
 
 == Screenshots ==
 1. **Stitchz Social Login Settings**: The Stitchz Social Login Settings Screen
