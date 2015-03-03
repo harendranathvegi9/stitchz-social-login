@@ -27,7 +27,9 @@ require_once( STITCHZ_SOCIAL_LOGIN__PLUGIN_DIR . '/views/user.php' );
  * @return void
  */
 function stitchz_social_login_activate() {
-  _log_debug( 'Flushing the rewrite rules...' );
+  if (function_exists('_log_debug')) {
+    _log_debug( 'Flushing the rewrite rules...' );
+  }
   flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'stitchz_social_login_activate' );

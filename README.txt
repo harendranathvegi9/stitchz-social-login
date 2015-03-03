@@ -3,8 +3,8 @@ Contributors: stitchzdotnet
 Link: http://www.stitchz.net/
 Tags: user authentication, social login, facebook, google, twitter, single sign-on, linkedin, social authentication, sso, vk, plugin, widget, yahoo, microsoft live, paypal, google plus, open id
 Requires at least: 3.9.2
-Tested up to: 4.1
-Stable tag: 1.0.2
+Tested up to: 4.1.1
+Stable tag: 1.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
